@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: #0d4600;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.header-info h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #f0f8ff;
+}
+
+.student {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #e0e8ff;
+}
+
+.topic {
+    font-size: 16px;
+    font-style: italic;
+    color: #b0d0ff;
+}
+
+main {
+    flex: 1;
+    background-color: #f0f0f0;
+    color: #000000;
+    padding: 30px 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d4600;
+    color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.layout-type {
+    font-weight: bold;
+    color: rgb(8, 0, 255);;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border-radius: 16px;
+}
+
+.results-list {
+    background-color: white;
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+.results-table th,
+.results-table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+.results-table th {
+    background-color: #0d4600;
+    color: white;
+}
+
+.block-container {
+    overflow: hidden;
+}
+.result-block {
+    border: 2px solid rgb(8, 0, 255);
+    padding: 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    float: left;
+    background-color: white;
+}
+
+.statistics, .parameters {
+    background-color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* --- Стили для лабораторной работы №5 --- */
+
+/* Главное меню (тип вёрстки) */
+.top-menu {
+    background-color: #0d4600;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #1a6b00;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.top-menu a:hover {
+    background-color: #1a6b00;
+}
+
+.top-menu a.selected {
+    background-color: #ffcc00;
+    color: #0d4600;
+    font-weight: bold;
+}
+
+/* Основной контейнер для бокового меню и контента */
+.main-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Боковое меню (основное) */
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    background-color: #0d4600;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #1a6b00;
+}
+
+.sidebar a.selected {
+    background-color: #ffcc00;
+    color: #0d4600;
+    font-weight: bold;
+}
+
+/* Область контента */
+.content {
+    flex: 1;
+}
+
+/* Табличная вёрстка */
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.multiplication-table td {
+    border: 1px solid #0d4600;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.multiplication-column {
+    background-color: #f9f9f9;
+}
+
+.multiplication-column-single {
+    background-color: #f0f0f0;
+    font-size: 1.2em; /* крупнее для одиночного столбца */
+}
+
+/* Блочная вёрстка */
+.multiplication-block-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.multiplication-block {
+    flex: 1 1 150px;
+    border: 1px solid #0d4600;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.multiplication-block-single {
+    border: 2px solid #0d4600;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Стили для ссылок внутри таблицы */
+.multiplication-table a, .multiplication-block a, .multiplication-block-single a {
+    color: #0d4600;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed #0d4600;
+}
+
+.multiplication-table a:hover, .multiplication-block a:hover, .multiplication-block-single a:hover {
+    color: #ffcc00;
+    border-bottom-color: #ffcc00;
+}
+
+/* Подвал */
+footer p {
+    margin-bottom: 5px;
+}
