@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: #0d4600;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.header-info h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #f0f8ff;
+}
+
+.student {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #e0e8ff;
+}
+
+.topic {
+    font-size: 16px;
+    font-style: italic;
+    color: #b0d0ff;
+}
+
+main {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 30px 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d4600;
+    color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* --- Стили для лабораторной работы №3 (калькулятор) --- */
+.result {
+    background-color: white;
+    border: 2px solid #0d4600;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    min-height: 80px;
+    line-height: 80px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #0d4600;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 70px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+    border: 1px solid #0a3500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    background-color: #1a6b00;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.reset-button {
+    background-color: #8b0000;
+    border-color: #650000;
+}
+
+.reset-button:hover {
+    background-color: #b30000;
+}
+
+/* --- Стили для лабораторной работы №4 (таблицы) --- */
+.lab4-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.lab4-table th,
+.lab4-table td {
+    border: 1px solid #0d4600;
+    padding: 8px;
+    text-align: left;
+}
+
+.lab4-table th {
+    background-color: #0d4600;
+    color: white;
+}
+
+/* --- Стили для лабораторной работы №5 (таблица умножения) --- */
+.top-menu {
+    background-color: #0d4600;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #1a6b00;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.top-menu a:hover {
+    background-color: #1a6b00;
+}
+
+.top-menu a.selected {
+    background-color: #ffcc00;
+    color: #0d4600;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    background-color: #0d4600;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #1a6b00;
+}
+
+.sidebar a.selected {
+    background-color: #ffcc00;
+    color: #0d4600;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+}
+
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.multiplication-table td {
+    border: 1px solid #0d4600;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.multiplication-column {
+    background-color: #f9f9f9;
+}
+
+.multiplication-column-single {
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+}
+
+.multiplication-block-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.multiplication-block {
+    flex: 1 1 150px;
+    border: 1px solid #0d4600;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.multiplication-block-single {
+    border: 2px solid #0d4600;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.multiplication-table a, .multiplication-block a, .multiplication-block-single a {
+    color: #0d4600;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed #0d4600;
+}
+
+.multiplication-table a:hover, .multiplication-block a:hover, .multiplication-block-single a:hover {
+    color: #ffcc00;
+    border-bottom-color: #ffcc00;
+}
+
+/* --- Стили для лабораторной работы №6 (форма) --- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    width: 180px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.checkbox-group {
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    width: auto;
+    font-weight: normal;
+}
+
+.submit-button {
+    background-color: #0d4600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #1a6b00;
+}
+
+.report {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.report h2 {
+    color: #0d4600;
+    margin-top: 0;
+}
+
+.report p {
+    margin: 8px 0;
+}
+
+.mail-sent {
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    color: #155724;
+}
+
+.repeat-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#back_button {
+    display: inline-block;
+    background-color: #0d4600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #0a3500;
+    transition: background-color 0.2s;
+}
+
+#back_button:hover {
+    background-color: #1a6b00;
+}
+
+@media print {
+    .top-menu, .sidebar, .repeat-button, .submit-button, .form-container form, header, footer {
+        display: none !important;
+    }
+    .report {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background: white;
+        padding: 0;
+    }
+    main {
+        padding: 0;
+    }
+}
+
+/* --- Стили для лабораторной работы №7 (сортировка) --- */
+.container {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.array-state {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 4px solid #0d4600;
+    font-size: 1.1em;
+}
+.step {
+    font-family: monospace;
+    background-color: #fafafa;
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.array-table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+.array-table td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.element-number {
+    font-weight: bold;
+    padding-right: 10px;
+}
+input[type="text"] {
+    width: 150px;
+}
+.algorithm-select {
+    margin: 15px 0;
+}
+button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* --- Стили для лабораторной работы №8 (анализ текста) --- */
+.input-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.input-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.result-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.original-text {
+    font-style: italic;
+    color: #0d4600;
+    background: #f0f0f0;
+    padding: 15px;
+    border-left: 4px solid #0d4600;
+    margin: 20px 0;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+.result-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.result-container th, .result-container td {
+    border: 1px solid #0d4600;
+    padding: 8px;
+    vertical-align: top;
+}
+.result-container th {
+    background-color: #0d4600;
+    color: white;
+}
+.back-link {
+    display: inline-block;
+    background-color: #0d4600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.back-link:hover {
+    background-color: #1a6b00;
+}
+.error {
+    background-color: #ffcccc;
+    padding: 15px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    color: #8b0000;
+}
+h2, h3 {
+    color: #0d4600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- Стили для лабораторной работы №9 (записная книжка) --- */
+#menu {
+    background: #0d4600;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#menu a {
+    display: inline-block;
+    background: #1a6b00;
+    color: white;
+    padding: 8px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+#menu a:hover {
+    background: #2a8a00;
+}
+#menu a.selected {
+    background: #ff0000;
+    color: white;
+}
+#submenu {
+    margin-top: 10px;
+}
+#submenu a {
+    background: #2a6b2a;
+    font-size: 0.9em;
+    padding: 4px 12px;
+}
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 20px 0;
+}
+.contacts-table th, .contacts-table td {
+    border: 1px solid #0d4600;
+    padding: 8px;
+    text-align: left;
+}
+.contacts-table th {
+    background: #0d4600;
+    color: white;
+}
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #0d4600;
+    text-decoration: none;
+    color: #0d4600;
+}
+.pagination a:hover {
+    border: 2px solid #0d4600;
+    background: #e0ffe0;
+}
+.pagination span {
+    background: #0d4600;
+    color: white;
+    font-weight: bold;
+}
+.form-container, .edit-container, .delete-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.form-container div, .edit-container div {
+    margin-bottom: 12px;
+}
+.form-container label, .edit-container label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+.form-container input, .form-container textarea, .form-container select,
+.edit-container input, .edit-container textarea, .edit-container select {
+    width: 300px;
+    padding: 5px;
+}
+button {
+    background: #0d4600;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background: #1a6b00;
+}
+.contact-list {
+    margin: 20px 0;
+}
+.contact-list a, .contact-list div {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 3px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+}
+.contact-list a:hover {
+    background: #c0c0c0;
+}
+.contact-list .selected-contact {
+    background: #ff0000;
+    color: white;
+    font-weight: bold;
+}
+.ok {
+    background: #d4edda;
+    color: #155724;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
